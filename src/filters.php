@@ -35,7 +35,7 @@ Route::filter('validate_admin', function ()
 //validate_model filter
 Route::filter('validate_model', function($route, $request)
 {
-	$modelName = $route->getParameter('model');
+	$modelName = $route->parameter('model');
 
 	App::singleton('itemconfig', function($app) use ($modelName)
 	{
